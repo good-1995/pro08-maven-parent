@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+        
+  
+  
+  <modelVersion>4.0.0</modelVersion>
+        
+  
+  
+  <groupId>come.atguigu.maven</groupId>
+        
+  
+  
+  <artifactId>pro03-maven-parent</artifactId>
+        
+  
+  
+  <version>1.0-SNAPSHOT</version>
+        
+  
+  
+  <packaging>pom</packaging>
+        
+  
+  
+  <name>pro03-maven-parent</name>
+        
+  
+  
+  <url>http://maven.apache.org</url>
+        
+  
+  
+  <properties>
+                
+    
+    
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+              
+  
+  
+  </properties>
+      
+  
+  
+  <modules>
+              
+    
+    
+    <module>come.atguigu.maven</module>
+              
+    
+    
+    <module>pro05-maven-module</module>
+          
+    
+    <module>pro04-maven-module</module>
+      
+  </modules>
+ <!-- 使用dependencyManagement标签配置对依赖的管理 -->
+ <!-- 被管理的依赖并没有真正被引入到工程 -->
+<dependencyManagement>
+  <dependencies>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-core</artifactId>
+	  <version>4.0.0.RELEASE</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-beans</artifactId>
+	  <version>4.0.0.RELEASE</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-context</artifactId>
+	  <version>4.0.0.RELEASE</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-expression</artifactId>
+	  <version>4.0.0.RELEASE</version>
+	</dependency>
+	<dependency>
+	  <groupId>org.springframework</groupId>
+	  <artifactId>spring-aop</artifactId>
+	  <version>4.0.0.RELEASE</version>
+	</dependency>
+  </dependencies>
+</dependencyManagement>
+
+</project>
